@@ -1,0 +1,187 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body>
+	<!---------------------------------------------------->	
+	<header>
+		<!--Use Flexbox to create the navigation bar-->
+		<div class="flexbox-container">
+			<div class="box-1">
+				<img src="MEDIA/global.png" alt="Logo"/>		
+			</div>	
+				
+			<div class="box-2">
+				<p class="tagline">ITWD6.408 </p>
+			</div>
+			
+			<div class="box-3">
+				<div class="horizontal-nav">
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="forms.html">FORMS</a></li>
+						<li><a href="xml-json.html">XML/JSON</a></li>
+						<li><a href="js-demo.html">JAVASCRIPT</a></li>
+						<li class="active"><a href="my-research.html">RESEARCH</a></li>	
+					</ul>
+				</div>			
+			</div>			
+			<div class="box-4">
+				<p onclick="openNav()">≡</p>
+			</div>				
+		</div>	
+
+		<!--Curtain menu: collapse this menu as default when loading the page-->
+		<nav id="curtain-nav">
+			<!--Add a close button (X) hyperlink on the top left corner-->
+			<a href="javascript:void(0)" class="nav-close-button" onclick="closeNav()">❌</a>
+			<div class="curtain-nav-content">
+				<ul>
+					<li class="active"><a href="index.html">HOME</a></li>
+					<li><a href="forms.html">FORMS</a></li>
+					<li><a href="xml-json.html">XML/JSON</a></li>
+					<li><a href="js-demo.html">JAVASCRIPT</a></li>
+					<li><a href="my-research.html">RESEARCH</a></li>	
+				</ul>
+			</div>
+		</nav>
+	</header>
+    <body>
+        <div class="biocontainer2">
+			<div class="biobox3">
+				<div class="flip-box7 col-4">
+					<div class="flip-box-inner7">
+					  <div class="flip-box-front7">
+						<h2>Web Publishing:</h2><br>
+                        <h3>How to choose the right host for you?</h3>
+					  </div>
+					  <div class="flip-box-back7">
+						<p>There are 3 things you need to look out for when buying a host</p><br>
+                        <p>1: Latency: if hosting a site for local use only, use a host with servers relatively close, if hosting site globally, use a host with servers across the world</p><br>
+                        <p>2: Cost: Don't buy a host that is too expensive for your needs, only get what you need. However the inverse works as well, don't underpay for hosting</p><br>
+                        <p>3: Service Quality: Don't buy the bottom of the barrel host unless you can work around the limitations that may be provided, such as high downtime</p>
+					  </div>
+					</div>
+				  </div>
+				  <div class="flip-box8 col-8">
+					<div class="flip-box-inner8">
+					  <div class="flip-box-front8">
+						<h2>Search Engine Optimization</h2>
+                        <h3>How to get your website to show up on google</h3>
+					  </div>
+					  <div class="flip-box-back8">
+						<h2>These are 5 ways to improve your website on google</h2>
+                        <p>1: Use a Robots.txt file: Robots.txt tells google where on your site not to trawl for search results, useful for say, a shopping cart</p><br>
+                        <p>2: Use Title tags correctly: Title tags will show up as the pages name on google, so name it well</p><br>
+                        <p>3: Use Meta tags correctly: the description tag will be used for the sites description on google</p><br>
+                        <p>4: Use Structured data markup: this is more useful for stores, but if you use structured data markup, it will allow google to display prices and reviews for whatever product it is</p><br>
+                        <p>5: Keep your URLs simple: keeping your urls simple allows for google to parse it easier</p>
+                        <a href="https://developers.google.com/search/docs/beginner/seo-starter-guide">Source</a>
+					  </div>
+					</div>
+				  </div>
+				  <div class="flip-box9 col-4">
+					<div class="flip-box-inner9">
+					  <div class="flip-box-front9">
+						<h2>Web Security</h2>
+                        <h3>How to prevent your systems from getting PWNed</h3>
+					  </div>
+					  <div class="flip-box-back9">
+						<h2>Here is 5 common attacks and how to prevent them</h2>
+                        <p>1: Man in the middle attack: man in the middle attack is when a malicious actor hijacks the connection between a server and user, generally by being on the same network as the user</p>
+                        <p>How to prevent?: Use HTTPS. HTTPS encrypts traffic, preventing this from happening</p>
+                        <p>2: Attacks using legacy attack vectors: Currently most famous in New Zealand for the DHB hack, legacy attack vectors rely on software that has not been updated but security flaws have been published for it</p>
+                        <p>How to prevent?: Update software when it becomes EOL(End Of Life)</p>
+                        <p>3: DDoS: Distributed Denial of Service, or DDoS is when a server is overloaded with requests, generally from malicious people, using botfarms</p>
+                        <p>How to prevent?: Use a DDoS mitigation service such as Cloudflare</p>
+                        <p>4: Breaches in closed source software: Closed source software does not allow 3rd parties to verify security as the code is hidden from the user, this can be used if someone finds a vulnerability</p>
+                        <p>How to prevent?: Use open source alternatives to closed source software, as open source allows you to look at the code and verify for yourself, alongside others</p>
+                        <p>5:Accidentally leaving ports open: ports allow for programs to communicate over the internet, however some can do more than others, such as port 1433</p>
+                        <p>How to prevent?: close all ports except for those that are necessary</p>
+                        <a href="https://securitybrief.co.nz/story/the-biggest-cyber-attacks-of-2021-in-new-zealand">Source</a>
+					  </div>
+					</div>
+				  </div>
+                  </div>
+        <div class="biocontainer2">
+            <div class="biobox3">
+                  <div class="flip-box4 col-4">
+					<div class="flip-box-inner4">
+					  <div class="flip-box-front4">
+						<h2>Creative Commons and Copyright</h2>
+					  </div>
+					  <div class="flip-box-back4">
+						<h2>Here i will discuss the basic principles of Copyright, 4 types of Creative Commons licenses and Fair use</h2>
+                        <p>Copyright is a system that protects authors works, such as an artists work, or a writers books, it lasts for the authors lifetime plus 50 years</p>
+                        <p>Attribution-NoDerivativess (CC BY-ND)</p>
+                        <p>this license lets people reuse the work as long as it is not altered and as long as they credit you</p>
+                        <p>Attribution-NonCommercial (CC BY-NC)</p>
+                        <p>this license does not allow for it to be used commercially, and it does not have to be licensed under the same terms if adapted</p>
+                        <p>Attribution-NonCommercial-ShareAlike (CC BY-NC-SA)</p>
+                        <p>this license does not allow commercial use, must be credited, and has to have the same terms even if adapted</p>
+                        <p>Attribution-NonCommercial-NoDerivs (CC BY-NC-ND)</p>
+                        <p>this license does not allow commercial use, must be credited, has to have the same terms, and cannot be edited</p>
+                        <a href="https://creativecommons.org/licenses/">Source</a>
+					  </div>
+					</div>
+				  </div>
+                  <div class="flip-box5 col-4">
+					<div class="flip-box-inner5">
+					  <div class="flip-box-front5">
+						<h2>Privacy Policy</h2>
+					  </div>
+					  <div class="flip-box-back5">
+						<h2>A privacy policy is used to describe what is done with the information given to the system by you being on the website</h2>
+                        <p>this websites privacy policy is:</p>
+                        <p>I don't collect information on users, and i don't plan on using it even if i did</p>
+					  </div>
+					</div>
+				  </div>
+                  <div class="flip-box6 col-4">
+					<div class="flip-box-inner6">
+					  <div class="flip-box-front6">
+						<h2>Web performance and maintenance</h2>
+					  </div>
+					  <div class="flip-box-back6">
+						<h2>Here i will discuss 5 ways to speed up page loading time and 5 tasks to carry out when maintaining a website</h2>
+                        <p>Loading times</p>
+                        <p>1: put javascript at the bottom of the page, to allow for it to load last</p>
+                        <p>2: use appropriately sized images, reducing bandwidth used loading it</p>
+                        <p>3: use a high performance host</p>
+                        <p>4: reduce use of redirects</p>
+                        <p>5: use a CDN(Content Delivery Network) to allow the server hosting the webpage to be closer to the user</p>
+                        <a href="https://blog.hubspot.com/marketing/how-to-reduce-your-websites-page-speed">Source</a>
+                        <p>Maintenance</p>
+                        <p>1: always try to announce maintenance ahead of time</p>
+                        <p>2: use the downtime to update plugins</p>
+                        <p>3: check for irregularities in the filesystem, this may unveil an attack that took place</p>
+                        <p>4: run backups</p>
+                        <p>5: make sure the backup isn't corrupted</p>
+                        <a href="https://fingerprintmarketing.com/website-maintenance/">Source</a>
+					  </div>
+					</div>
+				  </div>
+			</div>
+		</div>
+    </body>
+    <!--Footer section-->
+	<footer>
+		<a href="https://Google.com">
+		<img src="MEDIA/google.png"></a><br> <br>
+		<div> @Created by: Hunter Mends <br>
+		</div>
+	</footer>
+	
+	<!--Embed the js file at the bottom of the html file-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="JS/javascript.js">
+	</script>
+
+</body>
+</html>
+

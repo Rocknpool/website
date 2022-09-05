@@ -1,0 +1,748 @@
+/*-------------------------------------------------*/
+/* MOBILE FIRST APPROACH
+   All the below CSS styles are valid for Mobile (small) devices
+   Link: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+  
+   CSS Relative Unit
+   Link: https://www.w3schools.com/cssref/css_units.asp
+         https://css-tricks.com/css-font-size/
+         https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
+*/
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #f4f4f4;	
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16px;/*Set the baseline font size for the whole website*/
+}
+
+/*Footer Area*/
+footer {
+	height: 10vh;
+	background-color: #DAF7A6;
+	text-align: center;
+	
+	/*Centering both vertical and horizontal*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: auto;
+}
+
+/*Main area*/
+main {
+	height: 85vh;
+	background-color: gray;
+}
+
+
+/*Header Area*/
+/*---------------------------------*/
+/*CSS flexbox: 1D Card Layout
+  Link 1: https://codelikethis.com/lessons/responsive-layout/flexbox-layout 
+  Link 2: https://medium.com/@merveyuksek/webpage-layout-examples-with-flexbox-88287f010a08
+*/
+.flexbox-container {
+	/*flexbox container*/
+	display: flex;
+	flex-direction: row;/*display on a row => horizontally*/  
+	
+	background-color: #DAF7A6;
+	min-height: 5vh;
+}
+
+.box-1 {
+	flex: 0; /*wrap the content*/
+}	
+
+.box-2 {
+	flex: 1;
+	
+	/*Centering both vertical and horizontal*/
+	display: flex;
+	font-size: 1.5em;
+	justify-content: left;
+	align-items: center;
+}
+  
+.box-3 {
+    flex: 4; /*horizontal nav on desktop*/
+	
+	/*Centering the content both vertical and horizontal*/
+	display: flex;
+	justify-content: center;
+	align-items: center;		
+}
+
+.box-4 {
+    flex: 1;/*Curtain menu*/
+	
+	font-size: 4.0em;
+	color: blue;
+	cursor: pointer;
+	text-align: right;
+	padding-right: 0.5em;
+}
+
+
+/*horizontal nav*/
+.horizontal-nav {
+	display: none; /*Hide on mobile devices*/
+}
+   
+/*Curtain menu*/
+nav {
+	padding: 10px 10px 10px 10px;/*10px 10px 10px 10px*/
+	overflow: visible;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+
+nav ul li {
+	display: block;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+nav ul li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;	
+}
+
+nav ul li ul li {
+	background: #555; 
+	display: block; 
+	font-size: 1em;
+}
+
+nav ul li ul li a {
+	display: block; 
+	text-align: left;
+
+}
+
+nav ul li.dropdown:hover ul {
+	display: block;
+}
+
+
+#curtain-nav {
+	height: 70%;/*100%*/
+	width: 0;/*Hide it as default when loading page*/
+	padding: 0;
+	position: fixed;
+	z-index: 3;
+	top: 0; 
+	right: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.9);
+	overflow-x: hidden;
+	transition: 0.5s;	
+}
+
+.curtain-nav-content {
+	/*For curtain menu*/
+	position: relative;
+	top: 15%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;	
+	overflow: visible;
+}
+
+.nav-close-button {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 2.0em;
+	color: white;
+	text-decoration: none;
+}
+
+/*Set hover effect for items in the menu*/
+.active {
+	background-color: #FF9633;
+}
+
+li:hover:not(.active) {
+	background-color: green;
+}
+body, html {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+  
+* {
+	box-sizing: border-box;
+}
+  
+.bg-image {
+	/* The image used */
+	background-image: url("../MEDIA/code.jpg");
+  
+	/* Add the blur effect */
+	filter: blur(8px);
+	-webkit-filter: blur(8px);
+  
+	/* Full height */
+	height: 30%;
+	width: 100%;
+  
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+  
+/* Position text in the middle of the page/image */
+.bg-text {
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+	color: white;
+	font-weight: bold;
+	border: 3px solid #f1f1f1;
+	position: absolute;
+	top: 21%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 80%;
+	padding: 20px;
+	text-align: center;
+}
+
+.biocontainer1{
+	display: flex;
+	flex-direction: column;
+}
+.biocontainer2{
+	display: flex;
+	flex-direction: column;
+}
+.biobox1{
+	width: 100vh;
+	height: 20vh;
+
+}
+.biobox2{
+	width: 100vh;
+	height: 20vh;
+
+}
+.biobox3{
+	width: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.biobox4{
+	width: 50vh;
+	height: 20vh;
+
+}
+.biobox5{
+	width: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box1 {
+	background-color: transparent;
+	width: 30vh;
+	height: 20vh;
+	border: 1px solid #f1f1f1;
+	perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+  
+/* This container is needed to position the front and back side */
+.flip-box-inner1 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+  
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box1:hover .flip-box-inner1 {
+	transform: rotateY(180deg);
+}
+  
+/* Position the front and back side */
+.flip-box-front1, .flip-box-back1 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+}
+  
+/* Style the front side */
+.flip-box-front1 {
+	background-color: #bbb;
+	color: black;
+}
+  
+/* Style the back side */
+.flip-box-back1 {
+	background-color: dodgerblue;
+	color: white;
+	transform: rotateY(180deg);
+}
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box2 {
+	background-color: transparent;
+	width: 30vh;
+	height: 20vh;
+	border: 1px solid #f1f1f1;
+	perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+  
+/* This container is needed to position the front and back side */
+.flip-box-inner2 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+  
+/* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box2:hover .flip-box-inner2 {
+	transform: rotateY(180deg);
+}
+  
+/* Position the front and back side */
+  .flip-box-front2, .flip-box-back2 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+}
+  
+/* Style the front side */
+  .flip-box-front2 {
+	background-color: #bbb;
+	color: black;
+}
+  
+/* Style the back side */
+  .flip-box-back2 {
+	background-color: dodgerblue;
+	color: white;
+	transform: rotateY(180deg);
+}
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box3 {
+	background-color: transparent;
+	width: 30vh;
+	height: 20vh;
+	border: 1px solid #f1f1f1;
+	perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+  
+/* This container is needed to position the front and back side */
+.flip-box-inner3 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+  
+/* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box3:hover .flip-box-inner3 {
+	transform: rotateY(180deg);
+}
+  
+/* Position the front and back side */
+  .flip-box-front3, .flip-box-back3 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+}
+  
+/* Style the front side */
+  .flip-box-front3 {
+	background-color: #bbb;
+	color: black;
+}
+  
+/* Style the back side */
+  .flip-box-back3 {
+	background-color: dodgerblue;
+	color: white;
+	transform: rotateY(180deg);
+}
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box4 {
+	background-color: transparent;
+	width: 100vw;
+	height: 100vh;
+	border: 1px solid #f1f1f1;
+	perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+  
+/* This container is needed to position the front and back side */
+.flip-box-inner4 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+  
+/* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box4:hover .flip-box-inner4 {
+	transform: rotateY(180deg);
+}
+  
+/* Position the front and back side */
+  .flip-box-front4, .flip-box-back4 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+}
+  
+/* Style the front side */
+  .flip-box-front4 {
+	background-color: #bbb;
+	color: black;
+}
+  
+/* Style the back side */
+  .flip-box-back4 {
+	background-color: dodgerblue;
+	color: white;
+	transform: rotateY(180deg);
+}
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box5 {
+	background-color: transparent;
+	width: 100vw;
+	height: 100vh;
+	border: 1px solid #f1f1f1;
+	perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+  
+/* This container is needed to position the front and back side */
+.flip-box-inner5 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+  
+/* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box5:hover .flip-box-inner5 {
+	transform: rotateY(180deg);
+}
+  
+/* Position the front and back side */
+  .flip-box-front5, .flip-box-back5 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+}
+  
+/* Style the front side */
+  .flip-box-front5 {
+	background-color: #bbb;
+	color: black;
+}
+  
+/* Style the back side */
+  .flip-box-back5 {
+	background-color: dodgerblue;
+	color: white;
+	transform: rotateY(180deg);
+}
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box6 {
+	background-color: transparent;
+	width: 100vw;
+	height: 100vh;
+	border: 1px solid #f1f1f1;
+	perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+  
+/* This container is needed to position the front and back side */
+.flip-box-inner6 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+  
+/* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box6:hover .flip-box-inner6 {
+	transform: rotateY(180deg);
+}
+  
+/* Position the front and back side */
+  .flip-box-front6, .flip-box-back6 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+}
+  
+/* Style the front side */
+  .flip-box-front6 {
+	background-color: #bbb;
+	color: black;
+}
+  
+/* Style the back side */
+  .flip-box-back6 {
+	background-color: dodgerblue;
+	color: white;
+	transform: rotateY(180deg);
+}
+.flip-box7 {
+	background-color: transparent;
+	width: 100vw;
+	height: 100vh;
+	border: 1px solid #f1f1f1;
+	perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+  
+/* This container is needed to position the front and back side */
+.flip-box-inner7 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+  
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box7:hover .flip-box-inner7 {
+	transform: rotateY(180deg);
+}
+  
+/* Position the front and back side */
+.flip-box-front7, .flip-box-back7 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+}
+  
+/* Style the front side */
+.flip-box-front7 {
+	background-color: #bbb;
+	color: black;
+}
+  
+/* Style the back side */
+.flip-box-back7 {
+	background-color: dodgerblue;
+	color: white;
+	transform: rotateY(180deg);
+}
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box8 {
+	background-color: transparent;
+	width: 100vw;
+	height: 100vh;
+	border: 1px solid #f1f1f1;
+	perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+  
+/* This container is needed to position the front and back side */
+.flip-box-inner8 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+  
+/* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box8:hover .flip-box-inner8 {
+	transform: rotateY(180deg);
+}
+  
+/* Position the front and back side */
+  .flip-box-front8, .flip-box-back8 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+}
+  
+/* Style the front side */
+  .flip-box-front8 {
+	background-color: #bbb;
+	color: black;
+}
+  
+/* Style the back side */
+  .flip-box-back8 {
+	background-color: dodgerblue;
+	color: white;
+	transform: rotateY(180deg);
+}
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box9 {
+	background-color: transparent;
+	width: 100vw;
+	height: 100vh;
+	border: 1px solid #f1f1f1;
+	perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+  
+/* This container is needed to position the front and back side */
+.flip-box-inner9 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+  
+/* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box9:hover .flip-box-inner9 {
+	transform: rotateY(180deg);
+}
+  
+/* Position the front and back side */
+  .flip-box-front9, .flip-box-back9 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+}
+  
+/* Style the front side */
+  .flip-box-front9 {
+	background-color: #bbb;
+	color: black;
+}
+  
+/* Style the back side */
+  .flip-box-back9 {
+	background-color: dodgerblue;
+	color: white;
+	transform: rotateY(180deg);
+}
+/*-------------------------------------------------*/
+/*RESPONSIVE CSS*/
+/*THUMB RULE: Mobile First
+  Use min-width to detect device screen size.
+  min-width: 768px means that "when viewport is 768px or larger (Tablet or PC), set these styles; 
+             otherwise (Mobile) set above styles"  
+*/
+@media screen and (min-width: 768px) {
+	
+   /*Make Horizontal nav visible*/
+   .horizontal-nav {
+	   display: block;
+	   
+	   	background-color: #DAF7A6; 
+		padding: 10px 10px 10px 10px;
+   }
+   
+   .horizontal-nav ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	.horizontal-nav ul li {
+		display: inline-block;
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.0em;
+	}
+
+	.horizontal-nav ul li a {
+		display: block;
+		color: black;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;	
+	}
+
+	.horizontal-nav ul li:hover:not(.active) {
+		background-color: green;
+	}
+	.biocontainer1{
+		flex-direction: row;
+	}
+	.biobox1{
+		width: 50%;
+	}
+	.profile{
+		transform: translate(00%);
+	}
+	.biobox3{
+		flex-direction: row;
+	}
+	.flip-box4{
+		width: 33vw;
+		height: 75vh;
+	}
+	.flip-box5{
+		width: 33vw;
+		height: 75vh;
+	}
+	.flip-box6{
+		width: 33vw;
+		height: 75vh;
+	}
+	.flip-box7{
+		width: 33vw;
+		height: 75vh;
+	}
+	.flip-box8{
+		width: 33vw;
+		height: 75vh;
+	}
+	.flip-box9{
+		width: 33vw;
+		height: 75vh;
+	}
+}
+
+
+
+
